@@ -1,0 +1,66 @@
+<%- include("partials/header") %>
+
+<div class="col-md-4 mx-auto p-4 bg-light rounded shadow">
+
+  <h3 class="fw-bold text-center mb-3">Register</h3>
+
+  <!-- SIMPLE TEXT MESSAGES -->
+  <% if (error_msg && error_msg.length) { %>
+    <p class="text-danger text-center fw-semibold"><%= error_msg[0] %></p>
+  <% } %>
+
+  <% if (success_msg && success_msg.length) { %>
+    <p class="text-success text-center fw-semibold"><%= success_msg[0] %></p>
+  <% } %>
+
+  <form action="/users/register" method="POST" autocomplete="off">
+
+    <input type="text" name="name" class="form-control mb-3" placeholder="Full Name" required>
+
+    <input type="email" name="email" class="form-control mb-3" 
+      placeholder="Email" required autocomplete="email">
+
+    <input type="password" name="password" class="form-control mb-3"
+      placeholder="Password" required autocomplete="new-password">
+
+    <!-- ROLE INPUT -->
+    <input type="hidden" name="role" id="roleInput" value="student">
+
+    <label class="fw-bold mb-2">Register As:</label>
+
+    <div class="d-flex justify-content-between mb-3">
+      <button type="button" id="studentBtn"
+        class="role-btn active-role w-50 me-2"
+        onclick="setRole('student')">Student</button>
+
+      <button type="button" id="adminBtn"
+        class="role-btn w-50"
+        onclick="setRole('admin')">Admin</button>
+    </div>
+
+    <button class="btn btn-dark w-100">Register</button>
+  </form>
+
+  <p class="text-center mt-3">
+    Already have an account? <a href="/users/login">Login</a>
+  </p>
+</div>
+
+<script>
+function setRole(role) {
+  document.getElementById("roleInput").value = role;
+
+  // Remove active class
+  document.getElementById("studentBtn").classList.remove("active-role");
+  document.getElementById("adminBtn").classList.remove("active-role");
+
+  // Add active class to selected button
+  if (role === "student") {
+    document.getElementById("studentBtn").classList.add("active-role");
+  } else {
+    document.getElementById("adminBtn").classList.add("active-role");
+  }
+}
+</script>
+
+<%- include("partials/footer") %>

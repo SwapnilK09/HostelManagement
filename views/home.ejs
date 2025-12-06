@@ -1,0 +1,197 @@
+<%- include("partials/header") %>
+
+<style>
+  /* ============================
+       GLOBAL SECTION STYLES
+  ============================= */
+  .section-block {
+    padding: 60px 20px;
+    background: #f8faff;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #2c3e50;
+  }
+
+  .info-box {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  /* ============================
+       HERO SECTION
+  ============================= */
+  .hero-wrapper {
+    padding: 70px 20px 60px;
+    text-align: center;
+    background: linear-gradient(to bottom right, #e9f0ff, #ffffff);
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: #555;
+    margin: 8px 0 25px;
+  }
+
+  .hero-image {
+    width: 92%;
+    max-width: 950px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+  }
+
+  .hero-image:hover {
+    transform: scale(1.02);
+  }
+
+  /* 🎨 Uniform Hero Buttons */
+  .hero-buttons {
+    margin-top: 30px;
+  }
+
+  .hero-btn {
+    padding: 12px 28px;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 2px solid #2c3e50;
+    background: white;
+    color: #2c3e50;
+    transition: 0.3s ease;
+  }
+
+  .hero-btn:hover {
+    background: #2c3e50;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  /* Feature list styling */
+  .feature-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .feature-list li {
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+    color: #2c3e50;
+    font-weight: 500;
+  }
+</style>
+
+
+<!-- ============================
+       HERO SECTION
+============================== -->
+<div class="hero-wrapper">
+
+  <h1 class="hero-title">Welcome to Your Second Home</h1>
+  <p class="hero-subtitle">Comfort | Safety | Community</p>
+
+  <img src="/images/h1.jpg" alt="Hostel Image" class="hero-image">
+
+  <div class="hero-buttons">
+    <a href="/rooms">
+      <button class="hero-btn">Explore Rooms</button>
+    </a>
+
+    <a href="/facilities">
+      <button class="hero-btn">Facilities</button>
+    </a>
+
+    <a href="/users/login">
+      <button class="hero-btn">File Complaint</button>
+    </a>
+  </div>
+
+</div>
+
+
+<!-- ============================
+       ABOUT US
+============================== -->
+<section class="section-block">
+  <h2 class="section-title text-center">Who We Are</h2>
+
+  <div class="info-box">
+    <p>
+      Our hostel strives to provide students with a safe, comfortable, and inspiring 
+      living environment. Built with a “Home Away From Home” vision, we support 
+      academic success, personal growth, and lifelong friendships.
+    </p>
+
+    <p>
+      <strong>Vision:</strong> Create a secure and supportive student living space.<br>
+      <strong>Mission:</strong> Deliver high-quality accommodation with modern facilities 
+      and a friendly atmosphere.
+    </p>
+
+    <p>
+      Since establishment (1990), our hostel has become the trusted choice for students nationwide, 
+      offering affordable living without compromising quality.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============================
+       WHY CHOOSE US
+============================== -->
+<section class="section-block">
+  <h2 class="section-title text-center">What Makes Us Special</h2>
+
+  <div class="info-box">
+    <ul class="feature-list">
+      <li>✔ Safe & secure environment with 24/7 supervision</li>
+      <li>✔ Affordable and comfortable rooms</li>
+      <li>✔ Friendly and supportive staff</li>
+      <li>✔ High-speed Wi-Fi & essential facilities</li>
+      <li>✔ Clean, hygienic, and well-maintained surroundings</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ============================
+       HOSTEL LIFE
+============================== -->
+<section class="section-block">
+  <h2 class="section-title text-center">Life at Our Hostel</h2>
+
+  <div class="info-box">
+    <p>
+      Hostel life is filled with learning, laughter, and memorable experiences. 
+      From late-night study sessions to fun group activities, students enjoy a balanced 
+      environment that supports both academics and recreation.
+    </p>
+
+    <p>
+      Our community encourages friendships, cultural exchange, study groups, and 
+      creative events that enrich student life.
+    </p>
+
+    <p>
+      A perfect mix of peace, productivity, and enjoyment — that’s life at our hostel!
+    </p>
+  </div>
+</section>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,28 @@
+<%- include("partials/header") %>
+
+<div class="col-md-4 mx-auto p-4 bg-light rounded shadow">
+
+  <h3 class="fw-bold text-center mb-3">Login</h3>
+
+  <!-- SIMPLE TEXT MESSAGES -->
+  <% if (error_msg && error_msg.length) { %>
+    <p class="text-danger text-center fw-semibold"><%= error_msg[0] %></p>
+  <% } %>
+
+  <% if (success_msg && success_msg.length) { %>
+    <p class="text-success text-center fw-semibold"><%= success_msg[0] %></p>
+  <% } %>
+
+  <form action="/users/login" method="POST" autocomplete="off">
+    <input type="email" name="email" class="form-control mb-3" placeholder="Email" required autocomplete="email">
+    <input type="password" name="password" class="form-control mb-3" placeholder="Password" required autocomplete="current-password">
+
+    <button class="btn btn-dark w-100">Login</button>
+  </form>
+
+  <p class="text-center mt-3">
+    Don't have an account? <a href="/users/register">Register</a>
+  </p>
+</div>
+
+<%- include("partials/footer") %>

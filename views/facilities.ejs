@@ -1,0 +1,224 @@
+<%- include("partials/header") %>
+
+<style>
+.facilities-section {
+  padding: 50px 0;
+}
+
+.facilities-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* Highlight Box */
+.highlights-box {
+  background: #ffffff;
+  padding: 30px 35px;
+  border-radius: 12px;
+  margin-bottom: 70px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.highlights-box h3 {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 18px;
+}
+
+.highlight-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlight-list li {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Facility Cards */
+.facility-box {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 70px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.facility-box img {
+  width: 430px;
+  height: 270px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.facility-info h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.facility-info p {
+  font-size: 1.15rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.facility-reverse {
+  flex-direction: row-reverse;
+}
+
+/* NOTE SECTION */
+.note-section {
+  background: #f5f7fb;
+  border-left: 5px solid #2c3e50;
+  padding: 30px;
+  margin-top: 60px;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.note-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.note-text {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.note-list {
+  font-size: 1.1rem;
+  color: #222;
+  padding-left: 12px;
+}
+
+.note-list li {
+  margin-bottom: 10px;
+}
+
+</style>
+
+<div class="container facilities-section">
+
+  <h2 class="facilities-title">Facilities</h2>
+
+  <!-- KEY HIGHLIGHTS -->
+  <div class="highlights-box">
+    <h3>Key Facilities</h3>
+    <ul class="highlight-list">
+      <li>✔ Fully Furnished Rooms</li>
+      <li>✔ Clean & Hygienic Washrooms</li>
+      <li>✔ Daily Room Cleaning</li>
+      <li>✔ 24/7 Water Supply (Hot & Cold)</li>
+      <li>✔ Electricity Backup / Generator</li>
+      <li>✔ Laundry Service</li>
+      <li>✔ High-Speed Wi-Fi</li>
+      <li>✔ Drinking Water Purifier / RO System</li>
+    </ul>
+  </div>
+
+  <!-- 1. GYM -->
+  <div class="facility-box">
+    <img src="/images/f1.jpg" alt="Gym & Exercise Area">
+    <div class="facility-info">
+      <h3>Gym & Exercise Area</h3>
+      <p>
+        Our fitness center includes treadmills, cycles, weights, and stretching spaces.
+        Students can maintain daily exercise routines to stay healthy & energetic.
+      </p>
+    </div>
+  </div>
+
+  <!-- 2. MESS -->
+  <div class="facility-box facility-reverse">
+    <img src="/images/f2.jpg" alt="Mess Facility">
+    <div class="facility-info">
+      <h3>Mess & Dining Hall</h3>
+      <p>
+        Nutritious meals served in a clean and comfortable dining space. 
+        Weekly special menus and hygiene checks ensure quality food every day.
+      </p>
+    </div>
+  </div>
+
+  <!-- 3. GROUP ACTIVITIES -->
+  <div class="facility-box">
+    <img src="/images/f3.jpg" alt="Group Activities">
+    <div class="facility-info">
+      <h3>Recreation & Group Activities</h3>
+      <p>
+        A common lounge for bonding, games, discussions, and relaxation.  
+        Encourages teamwork, friendships, and a balanced lifestyle.
+      </p>
+    </div>
+  </div>
+
+  <!-- 4. INDOOR SPORTS -->
+  <div class="facility-box facility-reverse">
+    <img src="/images/f4.jpg" alt="Indoor Sports">
+    <div class="facility-info">
+      <h3>Indoor Sports Arena</h3>
+      <p>
+        A dedicated indoor space designed for safe & fun sports practice.
+      </p>
+
+      <ul style="font-size:1.1rem; color:#333; margin-top:12px;">
+        <li> Badminton Court</li>
+        <li> Table Tennis</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5. OUTDOOR SPORTS -->
+  <div class="facility-box">
+    <img src="/images/f5.jpg" alt="Outdoor Sports">
+    <div class="facility-info">
+      <h3>Outdoor Sports Ground</h3>
+      <p>
+        A wide open ground for tournaments, practice sessions, and fitness.
+      </p>
+
+      <ul style="font-size:1.1rem; color:#333; margin-top:12px;">
+        <li> Cricket</li>
+        <li> Football</li>
+        <li> Volleyball</li>
+        <li> Basketball</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================
+         IMPORTANT NOTE SECTION
+  ============================= -->
+  <div class="note-section">
+    <h3 class="note-title">Important Notice</h3>
+
+    <p class="note-text">
+      Parents may stay in the hostel guest house for a maximum of <strong>3 days</strong>.  
+      For extended stay beyond 3 days, <strong>double charges</strong> will be applied.
+    </p>
+
+    <h5>For Booking, Please Contact:</h5>
+    <ul class="note-list">
+      <li>Sr. Supervisor: <strong>Mr. S. S. Patil</strong> — 1234567890</li>
+      <li>Supervisor: <strong>Mr. K. M. Joshi</strong> — 9876543210</li>
+    </ul>
+  </div>
+
+</div>
+
+<%- include("partials/footer") %>

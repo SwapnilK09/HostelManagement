@@ -1,0 +1,68 @@
+<%- include("partials/header") %>
+
+<h2 class="fw-bold mb-4">Manage Complaints</h2>
+
+<% if (success_msg) { %>
+  <p class="text-success fw-semibold text-center"><%= success_msg[0] %></p>
+<% } %>
+
+<% if (error_msg) { %>
+  <p class="text-danger fw-semibold text-center"><%= error_msg[0] %></p>
+<% } %>
+
+<table class="table table-bordered table-striped">
+  <thead class="table-dark">
+    <tr>
+      <th>Student</th>
+      <th>Complaint</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% complaints.forEach(c => { %>
+    <tr>
+      <td><%= c.user.name %></td>
+      <td><%= c.title %></td>
+      <td><%= c.description %></td>
+
+      <td>
+        <% if (c.image) { %>
+          <img src="<%= c.image %>" width="80">
+        <% } else { %>
+          <span class="text-muted">No Image</span>
+        <% } %>
+      </td>
+
+      <td class="fw-bold">
+        <% if (c.status === "pending") { %>
+          <span class="text-danger">Pending</span>
+        <% } else if (c.status === "in-progress") { %>
+          <span class="text-warning">In Progress</span>
+        <% } else { %>
+          <span class="text-success">Solved</span>
+        <% } %>
+      </td>
+
+      <td>
+        <form action="/complaints/status/<%= c._id %>" method="POST" class="d-flex">
+
+          <select name="status" class="form-select me-2">
+            <option value="pending" <%= c.status === "pending" ? "selected" : "" %>>Pending</option>
+            <option value="in-progress" <%= c.status === "in-progress" ? "selected" : "" %>>In Progress</option>
+            <option value="solved" <%= c.status === "solved" ? "selected" : "" %>>Solved</option>
+          </select>
+
+          <button class="btn btn-primary btn-sm">Update</button>
+        </form>
+      </td>
+
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,216 @@
+<%- include("partials/header") %>
+
+<style>
+.room-section {
+  padding: 50px 0;
+}
+
+.rooms-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* ROOM BOX */
+.room-box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;         /* Equal gap */
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.room-box img {
+  width: 420px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.room-info h3 {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.room-info p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.room-reverse {
+  flex-direction: row-reverse;
+}
+
+/* FEE SECTION */
+.fee-section {
+  margin-top: 70px;           /* Equal spacing before table */
+  padding: 40px 20px;
+  background: #f5f7fb;
+  border-radius: 12px;
+}
+
+.fee-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+}
+
+.fee-table th,
+.fee-table td {
+  padding: 14px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.fee-table th {
+  background: #2c3e50;
+  color: white;
+  font-weight: 600;
+}
+
+.fee-table tr:nth-child(even) {
+  background: #f0f3f8;
+}
+
+.fee-table tr:hover {
+  background: #e8eef7;
+  transition: 0.2s ease;
+}
+
+/* FACILITY BOX */
+.facility-section {
+  text-align: center;
+  margin: 60px auto;           /* Equal spacing after table */
+  padding: 30px;
+  background: #2c3e50;
+  color: white;
+  border-radius: 12px;
+  max-width: 900px;
+}
+
+.facility-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.facility-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.facility-btn {
+  background: #f1c40f;
+  color: black;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.facility-btn:hover {
+  background: #d4ac0d;
+  transform: translateY(-2px);
+}
+</style>
+
+<div class="container room-section">
+
+  <h2 class="rooms-title">Accommodations</h2>
+
+  <!-- BOX 1 -->
+  <div class="room-box">
+    <img src="/images/r1.jpg" alt="Hostel Beds">
+    <div class="room-info">
+      <h3>Bunk Beds & Comfortable Sleeping Area</h3>
+      <p>
+        Spacious bunk-bed setup designed for comfort and maximum ventilation.
+        Equipped with personal lights, wide windows, and fresh air circulation.
+      </p>
+    </div>
+  </div>
+
+  <!-- BOX 2 -->
+  <div class="room-box room-reverse">
+    <img src="/images/r3.jpg" alt="Study Area">
+    <div class="room-info">
+      <h3>Dedicated Study Area</h3>
+      <p>
+        Clean, well-lit study tables designed to help maintain focus and productivity.
+        Perfect for solo study or group learning sessions.
+      </p>
+    </div>
+  </div>
+
+  <!-- BOX 3 -->
+  <div class="room-box">
+    <img src="/images/r2.jpg" alt="Wardrobe">
+    <div class="room-info">
+      <h3>Spacious Wardrobe & Storage</h3>
+      <p>
+        Secure and well-structured wardrobes with enough space for all belongings,
+        ensuring safety and neat organization.
+      </p>
+    </div>
+  </div>
+
+  <!-- FEE STRUCTURE -->
+  <div class="fee-section">
+    <h2 class="fee-title">Hostel Fee Structure</h2>
+
+    <table class="fee-table">
+      <thead>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Room Type</th>
+          <th>FAS (₹)</th>
+          <th>Form Fee (₹)</th>
+          <th>Medical Fee (₹)</th>
+          <th>Total (₹)</th>
+          <th>Deposit (₹)</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr><td>1</td><td>Boys Normal</td><td>39,750</td><td>50</td><td>200</td><td>40,000</td><td>10,000</td></tr>
+        <tr><td>2</td><td>Boys Attached</td><td>41,750</td><td>50</td><td>200</td><td>42,000</td><td>10,000</td></tr>
+        <tr><td>3</td><td>Girls Normal</td><td>39,750</td><td>50</td><td>200</td><td>40,000</td><td>10,000</td></tr>
+        <tr><td>4</td><td>Girls Attached</td><td>41,750</td><td>50</td><td>200</td><td>42,000</td><td>10,000</td></tr>
+        <tr><td>5</td><td>Deluxe 2-Seater</td><td>54,750</td><td>50</td><td>200</td><td>55,000</td><td>15,000</td></tr>
+        <tr><td>6</td><td>Deluxe Single</td><td>64,750</td><td>50</td><td>200</td><td>65,000</td><td>15,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FACILITIES SECTION -->
+  <div class="facility-section">
+    <h3>Explore Our Facilities</h3>
+    <p>We offer essential services to ensure a comfortable and safe hostel stay.</p>
+
+    <a href="/facilities">
+      <button class="facility-btn">View Facilities</button>
+    </a>
+  </div>
+
+</div>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,54 @@
+<%- include("partials/header") %>
+
+<h2 class="fw-bold">Submit a Complaint</h2>
+
+<form action="/complaints/add" method="POST" class="p-3 bg-light rounded shadow-sm mb-4">
+  <input type="text" name="title" class="form-control mb-3" placeholder="Complaint Title" required>
+
+  <textarea name="description" class="form-control mb-3" rows="4" placeholder="Describe your issue" required></textarea>
+
+  <label class="form-label">Upload Image</label>
+  <input type="file" id="imageUpload" class="form-control mb-3">
+
+  <img id="preview" style="width:150px;display:none;" class="rounded mb-3">
+  <input type="hidden" name="imageUrl" id="imageUrl">
+
+  <button class="btn btn-dark w-100">Submit Complaint</button>
+</form>
+
+<h3>Your Complaints</h3>
+<div class="row">
+
+  <% complaints.forEach(c => { %>
+    <div class="col-md-4">
+      <div class="card shadow-sm mb-4 p-3">
+        <h5><%= c.title %></h5>
+        <p><%= c.description %></p>
+
+        <% if (c.image) { %>
+          <img src="<%= c.image %>" class="img-fluid rounded mb-2">
+        <% } %>
+
+        <span class="badge bg-info text-dark">Status: <%= c.status %></span>
+      </div>
+    </div>
+  <% }) %>
+
+</div>
+
+<script>
+document.getElementById("imageUpload").addEventListener("change", async (e) => {
+  const file = e.target.files[0];
+  document.getElementById("preview").src = URL.createObjectURL(file);
+  document.getElementById("preview").style.display = "block";
+
+  const fd = new FormData();
+  fd.append("file", file);
+
+  const upload = await fetch("/upload", { method: "POST", body: fd });
+  const result = await upload.json();
+  document.getElementById("imageUrl").value = result.url;
+});
+</script>
+
+<%- include("partials/footer") %>
