@@ -63,7 +63,6 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-// Server Start
-app.listen(PORT, () =>
-  console.log(` Server running at http://localhost:${PORT}`)
-);
+app.listen(PORT, () => {
+  console.log("🚀 Server started on Render at PORT:", PORT);
+});
