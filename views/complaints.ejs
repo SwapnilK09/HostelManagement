@@ -23,7 +23,7 @@
     <div class="col-md-4">
       <div class="card shadow-sm mb-4 p-3">
         <h5><%= c.title %></h5>
-        <p><%= c.description %></p>
+        <p><%= c.description and location%></p>
 
         <% if (c.image) { %>
           <img src="<%= c.image %>" class="img-fluid rounded mb-2">
