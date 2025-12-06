@@ -107,3 +107,67 @@ textarea {
   flex-wrap: wrap;
   gap: 20px;
 }
+
+
+/* ============================
+      MOBILE RESPONSIVE FIX
+   ============================ */
+@media (max-width: 768px) {
+
+  /* Make all sections fit screen */
+  .container, .room-section, .facilities-section, .section-block {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  /* Make hero image fit screen */
+  .hero-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Stack buttons vertically */
+  .hero-buttons button {
+    width: 100% !important;
+    margin-bottom: 10px;
+  }
+
+  /* Room & Facility boxes stacked */
+  .room-box,
+  .facility-box {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+
+  .room-box img,
+  .facility-box img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Better spacing for info text */
+  .room-info,
+  .facility-info {
+    text-align: center !important;
+  }
+
+  /* Fee table horizontal scroll */
+  .fee-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Navbar items centered on mobile */
+  nav ul {
+    flex-direction: column !important;
+    gap: 10px !important;
+    text-align: center !important;
+  }
+
+  /* Make footer text centered */
+  .footer {
+    text-align: center !important;
+  }
+}
